@@ -47,6 +47,38 @@
             display: inline-block;
             transition: background-color 0.3s ease;
         }
+        /* .rounded-image {
+    border-radius: 50%;
+    width: 100px;  /* Ensure the width matches your desired size */
+    /* height: 100px; /* Ensure the height matches your desired size */
+    /* object-fit: cover; /* Ensures the image covers the container without distortion */
+/* } */ 
+/* Ensure all styles are correctly applied */
+.rounded-image {
+  border-radius: 50% !important; /* Ensure the image is rounded */
+  border: 3px solid #333; /* Optional: Add a border for a professional look */
+  width: 200px !important;
+  height: 200px !important;
+  object-fit: cover; /* Ensure the image covers the entire rounded area without distortion */
+}
+
+/* Other styles that might be affecting the image */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
     </style>
 
   <!--
@@ -62,28 +94,26 @@
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
-
         <figure class="avatar-box">
-          <img src="./images/my-avatar.png" alt="Chintamani Tare" width="100px" sizes="100px">
+          <img class="rounded-image" src="./images/my-avatar.png" alt="Chintamani Tare" >
         </figure>
-
+        
         <div class="info-content">
+       
+      
           <h1 class="mb-4 mt-3"><span>Chintamani Tare</span></h1>
-
+      
           <!-- Element to contain animated typing -->
           <span id="typing-animation"></span>
           <br>
-
-          <h2>Student</h2>
-        <p><a href="https://github.com/chintamanitare" class="btn btn-primary py-3 px-4">My works</a></p>
-
+      
           <script>
             // Initialize the typing animation
             const typingAnimationElement = document.getElementById('typing-animation');
             
             // Create an array of typing text
             const typingTexts = [
-                'Redhat Certified System Administrator  ',
+                'Redhat Certified Administrator  ',
                 'Web Developer  ',
                 'Freelancer   ',
             ];
@@ -106,30 +136,16 @@
             
             // Start the typing animation loop
             playTypingAnimation(typingTexts[0]);
-            
-            </script>
-
-         
+          </script>
         </div>
-        
-
+      
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
-
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-
       </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
+      
+      
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
@@ -188,9 +204,87 @@
         <div class="separator"></div>
 
 <style>
-  .social-link ion-icon {
-    color: yellow;
-  }
+  /* Base styling for social list */
+.social-list {
+    display: flex;
+    justify-content: center; /* Center the list horizontally */
+    padding: 0;
+    list-style: none;
+    margin: 20px 0; /* Add margin to separate from other content */
+}
+
+/* Base styling for social items */
+.social-item {
+    margin: 0 0px; /* Reduced space between icons */
+}
+
+/* Base styling for social links */
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Light background color */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Base styling for social icons */
+.social-link ion-icon {
+    font-size: 24px;
+    color: inherit; /* Inherit color from link */
+}
+
+/* Hover effects for social links */
+.social-link:hover {
+    background-color: #007bff; /* Change background on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Focus state for social links */
+.social-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Blue outline for accessibility */
+}
+
+/* Specific colors for each social platform */
+.social-link[href*="facebook.com"] {
+    color: #3b5998; /* Facebook blue */
+}
+
+.social-link[href*="twitter.com"] {
+    color: #1da1f2; /* Twitter blue */
+}
+
+.social-link[href*="instagram.com"] {
+    color: #e4405f; /* Instagram gradient color */
+}
+
+.social-link[href*="linkedin.com"] {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.social-link[href*="youtube.com"] {
+    color: #ff0000; /* YouTube red */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-list {
+        justify-content: center; /* Center the icons on smaller screens */
+    }
+
+    .social-link {
+        width: 35px; /* Slightly smaller on mobile */
+        height: 35px;
+    }
+
+    .social-link ion-icon {
+        font-size: 20px; /* Adjust icon size for mobile */
+    }
+}
+
 </style>
 
 <ul class="social-list">
@@ -321,12 +415,8 @@
             
 I am a qualified and passionate Developer with experience in Redhat Linux administration and Computer Programming. 
 
-          </p>
-
-          <p>
             Strong creative and analytical skills. 
-Team player with an eye for detail. Also an active enthusiast in the field of Artificial Intelligence.
-            message and identity in the most creative way. I created web design for many famous brand companies.
+
           </p>
         </section>
 
@@ -349,7 +439,7 @@ Team player with an eye for detail. Also an active enthusiast in the field of Ar
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Linux System Administration</h4>
+                <h4 class="h4 service-item-title">Linux Certified System Administration</h4>
 
                 <p class="service-item-text">
                   Hands-on experience in Linux server installation, configuration, maintenance, 
@@ -370,7 +460,7 @@ Team player with an eye for detail. Also an active enthusiast in the field of Ar
 
                 <p class="service-item-text">
                   Proficient in creating responsive, interactive, and visually appealing websites. 
-                  Familiar with popular web development frameworks and tools, committed to continuous learning and improving skills. 
+                  committed to continuous learning and improving skills. 
                 </p>
               </div>
 
@@ -387,7 +477,7 @@ Team player with an eye for detail. Also an active enthusiast in the field of Ar
 
                 <p class="service-item-text">
                   Explored cloud technologies including AWS, Azure, and GCP. 
-                  Implemented security measures in cloud infrastructure, focusing on data encryption and access control.
+                  focusing on data encryption and access control.
                 </p>
               </div>
 
@@ -404,8 +494,7 @@ Team player with an eye for detail. Also an active enthusiast in the field of Ar
 
                 <p class="service-item-text">
                   Passionate YouTuber creating engaging video content. Specializes in editing and producing high-quality videos. 
-                  Known for captivating storytelling and visually appealing presentations. 
-                  Dedicated to growing and engaging with an audience through creative digital content.
+                  And also making good thumbnails.
                 </p>
               </div>
 
@@ -461,6 +550,111 @@ Team player with an eye for detail. Also an active enthusiast in the field of Ar
           </section>
 
         </div>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">LINUX</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">GIT</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">DOCKER</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">PYTHON</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WEB DEVELOPEMENT</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">COMMUNICATION SKILL</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">CLOUD</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+
+
+
+          </ul>
+
+        </section>
+
 
 
       
@@ -573,110 +767,7 @@ Studied courses in algorithms, data structures, software engineering, and databa
 
         </section>
 
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">LINUX</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">GIT</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">DOCKER</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">PYTHON</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WEB DEVELOPEMENT</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">COMMUNICATION SKILL</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">CLOUD</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-
-
-
-          </ul>
-
-        </section>
-
+       
       </article>
 
 
@@ -788,8 +879,7 @@ Studied courses in algorithms, data structures, software engineering, and databa
 
                   <p class="blog-text">
                     THIS CERTIFICATION REVEALS MY ABILITY TO PERFORM ADMINISTRATOR TASKS IN THE LINUX ENVIRONMENT. 
-                    IT HAS BEEN AN INCREDIBLE JOURNEY TO ACHIEVE THIS CERTIFICATION AND SKILL.
-
+                    
                   </p>
 
                 </div>
@@ -818,7 +908,7 @@ Studied courses in algorithms, data structures, software engineering, and databa
 
                   <p class="blog-text">
                     THIS INTENSIVE PROGRAM EQUIPPED ME WITH THE KNOWLEDGE AND SKILLS TO NAVIGATE 
-                    THE DYNAMIC AND EVER-EVOLVING WORLD OF CYBERSECURITY.
+                    WORLD OF CYBERSECURITY.
                   </p>
 
                 </div>
@@ -841,7 +931,7 @@ Studied courses in algorithms, data structures, software engineering, and databa
             
                   <p class="blog-text">
                     I COMPLETED ORACLE APPLICATION DEVELOPMENT FOUNDATION COURSE. 
-                    SKILLED AND CERTIFIED ORACLE APPLICATION DEVELOPER WITH A STRONG FOUNDATION IN APPLICATION DEVELOPMENT.
+                    
                   </p>
             
                   <div class="blog-actions">
@@ -873,7 +963,7 @@ Studied courses in algorithms, data structures, software engineering, and databa
 
                   <p class="blog-text">
                     FOCUSED ON MICROSOFT OFFICE, GRAPHIC DESIGNING (COREL, PHOTOSHOP),
-                     AND AUTOCAD. ALSO GAINED PROFICIENCY IN YOGA & MEDITATION, SOFT SKILLS & LIFE SKILLS, AND SPOKEN ENGLISH.                  </p>
+                     AND AUTOCAD.                 </p>
 
                 </div>
 
@@ -917,9 +1007,45 @@ Studied courses in algorithms, data structures, software engineering, and databa
     <div class="separator"></div>
 
     <style>
-      .social-link ion-icon {
-        color: yellow;
-      }
+     /* Base styling for the form button */
+.form-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #007bff; /* Primary color */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Styling the ion-icon within the button */
+.form-btn ion-icon {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+/* Hover state for the button */
+.form-btn:hover {
+    background-color: #0056b3; /* Darker shade of primary color */
+}
+
+/* Active state for the button */
+.form-btn:active {
+    transform: scale(0.95); /* Slightly shrink the button */
+}
+
+/* Focus state for the button */
+.form-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Blue outline */
+}
+
+      
     </style>
     
     <ul class="social-list">
